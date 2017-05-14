@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ravi_3882.lovelybells.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/categories_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.ravi_3882.lovelybells.CategoriesFragment"
+            tools:layout="@layout/fragment_categories" />
+
+        <fragment
+            android:id="@+id/vendors_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.ravi_3882.lovelybells.VendorsFragment"
+            android:layout_below="@id/categories_fragment"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            tools:layout="@layout/fragment_vendors"/>
+
+        <fragment
+            android:id="@+id/blogs_fragments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.ravi_3882.lovelybells.BlogsFragment"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_below="@id/vendors_fragment"
+            tools:layout="@layout/fragment_blogs"/>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.ravi_3882.lovelybells.RangeFragment"
+            android:layout_below="@id/blogs_fragments"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            tools:layout="@layout/fragment_blogs"/>
+    </RelativeLayout>
+</ScrollView>
